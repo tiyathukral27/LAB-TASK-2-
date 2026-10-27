@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel World</title>
+
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #1e3a5f;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav h1 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #4ea8de;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffd166;
+            color: #333;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Destinations */
+        .destinations {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .destinations h2 {
+            margin-bottom: 25px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            width: 250px;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            color: #1e3a5f;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            line-height: 1.5;
+        }
+
+        /* About Section */
+        .about {
+            background-color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 700px;
+            margin: 15px auto;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e3a5f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAaoyq4x3x2-YEMof15wAlkhiuHK169KjI",
+    authDomain: "travel-project-7c690.firebaseapp.com",
+    projectId: "travel-project-7c690",
+    storageBucket: "travel-project-7c690.firebasestorage.app",
+    messagingSenderId: "309492169713",
+    appId: "1:309492169713:web:c3ce3ab008944717766250",
+    measurementId: "G-QW9KNER3QP"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h1>Travel World</h1>
+
+        <a href="#home">Home</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <h2>Explore The World</h2>
+
+        <p>Discover beautiful places and create unforgettable memories.</p>
+
+        <a href="#destinations" class="btn">Explore Now</a>
+
+    </section>
+
+
+    <!-- Destinations Section -->
+    <section class="destinations" id="destinations">
+
+        <h2>Popular Destinations</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Paris</h3>
+                <p>
+                    Visit the Eiffel Tower and enjoy the beautiful
+                    streets and culture of Paris.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Dubai</h3>
+                <p>
+                    Experience luxury shopping, amazing buildings
+                    and exciting adventures.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Goa</h3>
+                <p>
+                    Relax on beautiful beaches and enjoy the
+                    peaceful atmosphere of Goa.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            Travel World helps travelers discover amazing destinations.
+            Our goal is to make travel planning simple, enjoyable and
+            memorable.
+        </p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: travelworld@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Travel World | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
